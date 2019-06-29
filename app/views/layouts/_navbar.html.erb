@@ -12,6 +12,7 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+        <!-- ユーザーがアカウントにログインしているときの処理 -->
           <% if logged_in? %>
             <li>
               <a href="#">
@@ -38,6 +39,7 @@
                 </li>
               </ul>
             </li>
+            <!-- ユーザーがログインしていないときの処理 -->
           <% else %>
             <li><%= link_to '新規登録', signup_path %></li>
             <li><%= link_to 'ログイン', login_path %></li>
